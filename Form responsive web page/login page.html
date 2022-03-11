@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Book | Shop
+        </title>
+<style>
+.div1{
+ background-image: url(book.jpg);
+ background-size: cover;
+ text-align: center;
+ color:#cc5f5fd5;
+}
+</style>
+<script>
+function validateForm() {
+      let email = document.forms["loginform"]["fmail"].value;
+      let name=document.forms["loginform"]["fname"].value;
+      if(name==""){
+          alert("Name Must be filled");
+      }
+      if (email == "") {
+        alert("Email must be filled out");
+}
+    return false;
+}
+function Keyup(){
+      document.getElementById("Book1").style.backgroundColor="#7897ad"
+}
+function mouseout(obj){
+    obj.innerHTML="Amazon"
+}
+function uppercase(){
+     const x= document.getElementById("upper");
+     x.value=x.value.toUpperCase();
+     return x
+}
+function textcolor(t) {
+  document.getElementById(t).style.color = "#7897ad";
+}
+window.addEventListener("resize",function(){
+    document.getElementById("pattern").innerHTML=Date();
+})
+    </script>
+    </head>
+    <body>
+        <div class="div1">
+            <h1 >Amazon || Book World</h1>
+        </div>
+        <div style="background-color:#7897ad;font-family:verdana;color:white;;text-align:center;">
+          <form name="loginform" action="action_page.php" onsubmit="validateForm()" method="post">
+            Email: <input type="text" name="fmail"><br><br>
+            Name: <input type="text" name="fname"><br><br>
+            <label for="Category">Category:</label>
+            <select name="Category" id="Category">
+            <option value="volvo">Kids</option>
+            <option value="saab">English Stories</option>
+            <option value="opel">Novel</option>
+            <option value="audi">Leaders</option>
+            </select>
+           <input type="submit" value="Submit">
+         </form>
+        </div>  
+        <p style="line-height:0.7cm;font-family: Arial, Helvetica, sans-serif;">A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its predecessor, the scroll. A single sheet in a codex is a leaf and each side of a leaf is a page.
+            As an intellectual object, a book is prototypically a composition of such great length that it takes a considerable investment of time to compose and still considered as an investment of time to read. In a restricted sense, a book is a self-sufficient section or part of a longer composition, a usage reflecting that, in antiquity, long works had to be written on several scrolls and each scroll had to be identified by the book it contained. Each part of Aristotle's Physics is called a book. In an unrestricted sense, a book is the compositional whole of which such sections, whether called books or chapters or parts, are parts.</p> 
+        <div style="text-align:center ;">
+          <h2 onclick="this.innerHTML='Lets learn Together!'">Book Message| Here</h2>
+        </div>
+        <div">
+            <h3 >Interested Topic <input type="text" id="Book1" onkeyup="Keyup()"></h3>
+        </div>
+        <div>
+            <h3>Author of Book <input type="text" id="upper" onkeyup="uppercase()"></h3>
+        </div>
+        <div>
+            <h3>Edition of Book<input type="text" id="textcol" onfocus="textcolor(this.id)"></h3>
+        </div>
+        <div>
+            <h4 onmouseout="mouseout(this)" style="background-image: url(book.jpg);width:60px;height:10px;padding:20px;">Seller</h4>
+        </div>
+        <div  style="background-image: url(book.jpg);background-size:cover ;text-align: center;">
+            <h3>Number of Books Sold out at online </h3>
+            <h4 id="pattern"></h4>
+        </div>
+        <div>
+            <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dvjZ1ba3RJfBa8HEAi6E-dDWV9CEz7MT6A&usqp=CAU"></center>
+            <p style="text-align: center;">Book Search works just like web search. Try a search on Google Books or on Google.com.<br> When we find a book with content that contains a match for your search terms, we'll link to it in your search results.</p>
+            <h3 id="id">Old offer </h3>
+            <script>
+            const element = document.getElementById("id");
+            element.innerHTML = "This is a new year 2022 offer! ";
+            </script>
+        </div>
+    </body>
+</html>
