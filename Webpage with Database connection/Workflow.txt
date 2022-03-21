@@ -5,5 +5,7 @@ create database and tables
 coding part connects php with html
 
 Open c drive-->xampp-->htdocs-->new folder(with Code)
-run it
+
+open google chrome
+localhost/folderNAME
 
