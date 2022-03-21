@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Cybo Library
+    </title>   
+</head>
+<body>
+    <h1 style="background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/book-quotes-1531945007.jpg?crop=1.00xw:0.753xh;0,0.247xh&resize=1200:*);text-align: center;background-size: cover;">WEB LIBRARY</h1>
+    <div style="background-color: #c1dad7;">
+    <form action="" style="text-align: center;"> 
+        <select name="Search" onchange="showCustomer(this.value)">
+          <option value="">Author's Books Available</option>
+          <option value="Anna Karenina">Clarence Brown</option>
+          <option value="To Kill a Mockingbird">Harper Lee</option>
+          <option value="The Great Gatsby">F. Scott Fitzgerald</option>
+          <option value="A Passage to India">E.M. Forster</option>
+          <option value="Invisible Man">Ralph Ellison</option>
+        </select>
+      </form>
+    </div>
+      <br>
+      <div id="txtHint"></div>
+      
+      <script>
+      function showCustomer(str) {
+        if (str == "") {
+          document.getElementById("txtHint").innerHTML ="";
+          return;
+        }
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+        }
+        xhttp.open("GET", "display.php?q="+str);
+        xhttp.send();
+      }
+      </script>
+      <div style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2gOp_o0HxgwsnD2iyj3XXC2eFq5Q8KyYD6A&usqp=CAU);background-size:cover;">
+      <center>
+      <form action="insert.php" method="post">     
+<p>
+    <label for="employeename">Employee Name:</label>
+    <input type="text" name="employeename" id="firstName"></p>
+<p>
+    <label for="salary">Salary:</label>
+    <input type="text" name="salary" id="lastName"> </p>           
+<p>
+    <label for="gender">Gender:</label>
+    <input type="text" name="gender" id="Gender"></p>
+    <input type="submit" value="Submit">
+    </form>
+    </center>
+  </div>        
+</body>
