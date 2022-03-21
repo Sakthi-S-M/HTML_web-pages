@@ -1,0 +1,9 @@
+Xampp---> Start mysql and apache
+google chrome--> localhost
+open phpmyadmin
+create database and tables
+coding part connects php with html
+
+Open c drive-->xampp-->htdocs-->new folder(with Code)
+run it
+

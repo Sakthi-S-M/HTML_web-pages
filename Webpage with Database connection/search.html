@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Student Collection|Online Website
+    </title>
+    <style>
+        th,td {
+          padding: 5px;
+        }
+        </style>
+</head>
+<body>
+    <body>
+        <h1 style="background-color:rgb(87, 162, 197) ;">STUDENT | Computerized Info</h1>
+        <h2 style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://cdn.wallpapersafari.com/59/2/Yx7JyI.jpg);font-family:verdana;text-align:center;line-height:15;font: weight 300px;background-size: cover;color: white;">STUDENT WHOLESOME</h2>
+        <form action="" style="text-align: center;"> 
+            <select name="customers" onchange="showCustomer(this.value)">
+              <option value="">Student info</option>
+              <option value="208">Sakthi</option>
+              <option value="206">Roshini</option>
+              <option value="129">Dharanikumar</option>
+              <option value="156">kishore</option>
+              <option value="252">Thenisha</option>
+            </select>
+          </form>
+          <br>
+          <div id="txtHint"></div>
+          
+          <script>
+          function showCustomer(str) {
+            if (str == "") {
+              document.getElementById("txtHint").innerHTML ="";
+              return;
+            }
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+              document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "details.php?q="+str);
+            xhttp.send();
+          }
+          </script>
+
+</body>
