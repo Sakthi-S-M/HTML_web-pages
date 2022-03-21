@@ -7,5 +7,5 @@ coding part connects php with html
 Open c drive-->xampp-->htdocs-->new folder(with Code)
 
 open google chrome
-localhost/folderNAME
+localhost/folder_name
 
